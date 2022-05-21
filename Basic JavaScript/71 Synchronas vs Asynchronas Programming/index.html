@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //synchronous programming;
+
+    // javascript is by default synchronous programming language its mean it docent break any sequence to run a program.
+    // need to complete 1 task to to move 2nd task thats why its called single thread programming.
+    // their is a behavior called blocking code behavior.
+
+       const taskOne = () =>{
+           console.log('task one');
+       };
+
+       const dataLoading = () =>{
+           console.log('task two data loading');
+       }
+
+       // import asynchronous function
+       const taskTwo = () =>{
+           //console.log('task two data loading'); //thats why its stooped for 3s and program stop in here and down code are waiting
+           setTimeout(dataLoading, 2000); // now its run at last and doesn't waiting other task
+           // set time out is not js function its a chrome feature its asynchronous function
+       };
+
+       const taskThree = () =>{
+           console.log('task three');
+       };
+       const taskFour = () =>{
+           console.log('task four');
+       };
+       const taskFive = () =>{
+           console.log('task five');
+       };
+
+
+       taskOne();
+       taskTwo();
+       taskThree();
+       taskFour();
+       taskFive();
+
+    // if any error occur in task 2 the program stop;
+
+
+
+    </script>
+</body>
+</html>

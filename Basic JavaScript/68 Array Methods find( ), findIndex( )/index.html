@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // find and findIndex
+
+        var numbers = [ 5, 27, 50, 22, 67];
+        /*
+        let firstEvenNum = numbers.find(x => x%2===0);
+        console.log(firstEvenNum); 
+
+        
+        let firstOddNum = numbers.find(x => x%2!==0);
+        console.log(firstOddNum);
+
+        */
+
+        /*
+       const evenNum = (value, index, arr) => {
+           if(value%2===0){
+               return value;
+           }
+       }
+        let firstEvenNum = numbers.find(evenNum);
+        console.log(firstEvenNum);
+
+        */
+
+        /*
+       let firstEvenNum = numbers.findIndex(x => x%2===0);
+       console.log(firstEvenNum); 
+
+             
+       let firstOddNum = numbers.findIndex(x => x%2!==0);
+       console.log(firstOddNum);
+       */
+
+       /*
+       const evenInd = (value, index, arr) => {
+           if(value%2===0){
+               return value;
+           }
+       }
+        let firstEvenInd = numbers.findIndex(evenInd);
+        console.log(firstEvenInd);
+
+        */
+
+        const student = [
+            {
+                id:101,
+                cgpa: 3.22
+            },
+            {
+                id:102,
+                cgpa: 3.65
+            },
+            {
+                id:103,
+                cgpa: 3.50
+            },
+            {
+                id:104,
+                cgpa: 3.42
+            },
+            {
+                id:105,
+                cgpa: 3.20
+            },
+            {
+                id:106,
+                cgpa: 3.10
+            },
+        ]
+
+        console.log(student.find(x => x.cgpa> 3.50));
+
+
+
+ 
+
+
+
+    </script>
+    
+</body>
+</html>

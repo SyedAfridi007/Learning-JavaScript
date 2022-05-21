@@ -1,0 +1,58 @@
+{
+    "students" : [
+        {
+            "name":"Syed Afridi",
+            "middleName" : null,
+            "age": 22,
+            "cgpa": 3.42,
+            "isRegistered": true,
+            "languages":["Bangali", "English", "Hindi"],
+            "friends":[
+                {
+                    "name":"Sihab",
+                    "age":22
+                },
+                {
+                    "name":"Firoz",
+                    "age":22
+                }
+            ]
+        },
+        {
+            "name":"Imran Sihab",
+            "middleName" : null,
+            "age": 22,
+            "cgpa": 3.22,
+            "isRegistered": true,
+            "languages":["Bangali", "English", "Hindi"],
+            "friends":[
+                {
+                    "name":"Afridi",
+                    "age":22
+                },
+                {
+                    "name":"Firoz",
+                    "age":22
+                }
+            ]
+        },
+        {
+            "name":"Firoz Fahim",
+            "middleName" : null,
+            "age": 22,
+            "cgpa": 3.32,
+            "isRegistered": true,
+            "languages":["Bangali", "English", "Hindi"],
+            "friends":[
+                {
+                    "name":"Imran",
+                    "age":22
+                },
+                {
+                    "name":"Afridi",
+                    "age":22
+                }
+            ]
+        }
+    ]
+}

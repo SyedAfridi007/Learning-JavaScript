@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     //Object Array
+        var students = [
+            { 
+              id : 101,
+              name : 'Syed Afridi',
+              cgpa : 3.42
+            },
+            {
+              id : 102,
+              name : 'Firoz Fahim',
+              cgpa : 3.62
+            },
+            {
+              id : 103,
+              name : 'Imran Sihab',
+              cgpa : 3.22
+            },
+            {
+              id : 104,
+              name : 'Rajib Das',
+              cgpa : 3.00
+            },
+            {
+              id : 105,
+              name : 'Fahim Ahmed',
+              cgpa : 3.65
+            },
+        ]
+
+        //console.log(students);
+
+        //Traditional Way
+        /*
+        function studentsName(){
+            return students.filter(function(x){
+                return x.cgpa> 3.50;
+            }).map(function(y){
+                return y.name
+            });
+        }
+        console.log(studentsName());
+        */
+       //pro
+       /*
+       const studentName = () => {
+           return students.filter((x) => x.cgpa < 3.50).map((y) => y.name);
+       }
+       console.log(studentName());
+       */
+
+       //ultra pro
+       const studentName = () => students.filter((x) => x.cgpa < 3.50).map((y) => y.name);
+       console.log(studentName());
+
+    </script>
+</body>
+</html>

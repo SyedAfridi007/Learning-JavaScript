@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <script>
+
+        //console.log(window)
+
+        const makeRequest = async (url,method, data) =>{
+            try{
+                const result = await $.ajax({
+                url:url,
+                method:method,
+                data:data
+               });
+              return result;
+
+            }catch(err){
+                console.log(err)
+            }
+ 
+        }
+        /*get
+        const getData = () => {
+            makeRequest('https://jsonplaceholder.typicode.com/posts')
+            .then((res) => console.log(res))
+        }
+        getData();
+        */
+
+        /*send
+        const postData = () => {
+            makeRequest('https://jsonplaceholder.typicode.com/posts',"POST",{ 
+                title: 'foo',
+                body:"bar",
+                userId:1,
+            })
+            .then((res) => console.log(res));
+        };
+        postData();
+        */
+
+        /*update
+        const updateData = () => {
+            makeRequest('https://jsonplaceholder.typicode.com/posts/1',"PUT",{ 
+                title: 'foom',
+                body:"bar",
+                userId:1,
+            })
+            .then((res) => console.log(res));
+        };
+        updateData();
+        */
+
+        /*patch
+        const updateSingleData = () => {
+            makeRequest('https://jsonplaceholder.typicode.com/posts/1',"PATCH",{ 
+                body:"barm",
+            })
+            .then((res) => console.log(res));
+        };
+        updateSingleData();
+        */
+
+        /*delete
+        const deleteData = () => {
+            makeRequest('https://jsonplaceholder.typicode.com/posts/1',"DELETE",{ 
+            })
+            .then((res) => console.log(res));
+        };
+        deleteData();
+        */
+
+
+    </script>
+</body>
+</html>

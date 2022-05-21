@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+    <script>
+        /*
+
+        function square(x){
+            console.log(`square of ${x}: ${x * x }`);
+        }
+        //square(5);
+        /*
+        const y = square;
+        y(10);
+        */
+
+        // when a function go another function for argument that function called callback function
+        // and callback function receiver function called higher order function 
+        // num = parameter name or argument name
+        /*
+        function higherOrderFunction(num, callBack){
+            callBack(num);
+        }
+
+        higherOrderFunction(6, square);
+
+        */
+
+        //example asynchronous programming
+        /*
+       console.log('hi');
+       let btn = document.querySelector('button').addEventListener('click', () => {
+           console.log('Button is clicked')
+       })
+       console.log('bye');
+       */
+
+
+       
+       const taskOne = (callback) =>{
+           console.log('task one');
+           callback();
+       };
+
+       const taskTwo = (callback) =>{
+           setTimeout(() => {
+            console.log('task two data loading');
+            callback();
+           }, 2000); 
+       };
+
+       const taskThree = (callback) =>{
+           console.log('task three');
+           callback();
+
+       };
+       const taskFour = (callback) =>{
+           console.log('task four');
+           callback();
+
+       };
+       const taskFive = () =>{
+           console.log('task five');
+       };
+
+
+       taskOne( function f1(){
+           taskTwo( function f2(){
+               taskThree( function f3(){
+                   taskFour(() => {
+                       taskFive();   
+                   });
+               });
+           });
+       });
+
+    </script>
+</body>
+</html>

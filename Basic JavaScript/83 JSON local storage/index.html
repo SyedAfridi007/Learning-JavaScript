@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        localStorage.setItem("lastname", "Smith");
+        localStorage.setItem("lastname2", "Afridi");
+        //localStorage.removeItem("lastname");
+        //localStorage.clear();
+
+        let name = localStorage.getItem('lastname2');
+        console.log(name);
+
+
+        //Array
+        let countries = ['Bangladesh', 'India', 'Pakistan', 'Sri lanka', 'Maldives', 'Nepal', 'Bhutan' ]
+        localStorage.setItem("countries", JSON.stringify(countries));
+
+        let c = JSON.parse(localStorage.getItem('countries'));
+        console.log(c[0]);
+
+
+        //Object
+        let Students = [
+            {
+                Name : 'Syed Afridi'
+            },
+            {
+                Name: 'Imran Sihab'
+            },
+            {
+                Name: 'Firoz Fahim'
+            }
+        ]
+
+        localStorage.setItem("students", JSON.stringify(Students));
+
+        let s = JSON.parse(localStorage.getItem(Students));
+        console.log(Students[0].Name)
+
+
+    </script>
+</body>
+</html>

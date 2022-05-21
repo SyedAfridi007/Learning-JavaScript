@@ -1,0 +1,248 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "students": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "middleName": {
+                "type": "null"
+              },
+              "age": {
+                "type": "integer"
+              },
+              "cgpa": {
+                "type": "number"
+              },
+              "isRegistered": {
+                "type": "boolean"
+              },
+              "languages": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "friends": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "age": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "age": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "middleName",
+              "age",
+              "cgpa",
+              "isRegistered",
+              "languages",
+              "friends"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "middleName": {
+                "type": "null"
+              },
+              "age": {
+                "type": "integer"
+              },
+              "cgpa": {
+                "type": "number"
+              },
+              "isRegistered": {
+                "type": "boolean"
+              },
+              "languages": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "friends": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "age": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "age": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "middleName",
+              "age",
+              "cgpa",
+              "isRegistered",
+              "languages",
+              "friends"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "middleName": {
+                "type": "null"
+              },
+              "age": {
+                "type": "integer"
+              },
+              "cgpa": {
+                "type": "number"
+              },
+              "isRegistered": {
+                "type": "boolean"
+              },
+              "languages": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "friends": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "age": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "age": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "middleName",
+              "age",
+              "cgpa",
+              "isRegistered",
+              "languages",
+              "friends"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "students"
+    ]
+  }

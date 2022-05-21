@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        var numbers = [ 10, 20, 30, 40, 50];
+        console.log(numbers[0]);
+        console.log(numbers[1]);
+        */
+
+        //destructing array
+        /*
+        var numbers = [ 10, 20, 30, 40, 50];
+        let [ num1, num2, num3, num4, num5] = numbers;
+
+        console.log(num1);
+        console.log(num2);
+        */
+
+        //swap variables using destructing
+        /*
+        let a = 10, b=20;
+        [a,b] = [b,a]
+
+        console.log(a)
+        console.log(b)
+        */
+
+        //object destructure
+
+        /*
+        var students = [
+            {
+                id : 101,
+                name : "Syed Afridi",
+                cgpa : 3.42,
+                //nested obj
+                language : {
+                    native : 'bangla',
+                    beginner : 'english'
+                }
+            },
+            {
+                id : 102,
+                name : "Ragib Das",
+                cgpa : 3.20
+            },
+        ]
+
+        let [st1, st2] = students;
+
+        let {id, name, cgpa} = st1;
+
+        console.log(st1.name);
+        console.log(cgpa);
+        //console.log(students[0].id);
+        //console.log(students[0].language.native)
+
+        */
+
+        // destructure function parameters
+
+        //normal way
+        /*
+        const studentInfo = (student) => {
+            console.log(`${student.id},${student.name}`)
+        }
+        const student = {
+            id : 101,
+            name : "Syed Afridi"
+        }
+        studentInfo(student);
+        */
+
+        //destructure way
+
+        const studentInfo = ({id, name}) => {
+            console.log(`${id},${name}`)
+        }
+        const student = {
+            id : 101,
+            name : "Syed Afridi"
+        }
+        studentInfo(student);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

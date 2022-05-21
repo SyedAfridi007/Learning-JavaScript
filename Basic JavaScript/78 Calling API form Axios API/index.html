@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <script>
+        //console.log(window)
+        /*get
+        axios.get('https://jsonplaceholder.typicode.com/posts/1')
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err));
+        */
+
+        
+        /*post
+        axios.post('https://jsonplaceholder.typicode.com/posts', {
+            method: "POST",
+            body: JSON.stringify({
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            }),
+        })
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err));
+        */
+
+        /*put
+        axios.put('https://jsonplaceholder.typicode.com/posts/1', {
+            method: "PUT",
+            body: JSON.stringify({
+                title: 'foom',
+                body: 'bar',
+                userId: 1,
+            }),
+        })
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err));
+        */
+
+        /*patch
+        axios.patch('https://jsonplaceholder.typicode.com/posts/1', {
+            method: "PATCH",
+            body: JSON.stringify({
+                title: 'boom',
+            }),
+        })
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err));
+        */
+
+
+        /*delete
+        axios.delete('https://jsonplaceholder.typicode.com/posts/1')
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err));
+        */
+
+
+
+
+
+
+
+        //axios with async and await
+
+        const makeRequest = async (config) => {
+            return await axios(config)
+        }
+
+
+        /*
+        const getData = () =>{
+            makeRequest("https://jsonplaceholder.typicode.com/posts")
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err))
+        }
+        getData();
+        */
+
+        /*post
+        const sendData = () =>{
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts",
+                method: "POST",
+                data: JSON.stringify({
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            }),
+
+            })
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err))
+        }
+        sendData();
+
+        */
+
+        /*put
+        const updateData = () =>{
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                method: "PUT",
+                data: JSON.stringify({
+                title: 'foom',
+                body: 'bar',
+                userId: 1,
+            }),
+
+            })
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err))
+        }
+        updateData();
+        */
+
+        /*patch
+        const updateSingleData = () =>{
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                method: "PATCH",
+                data: JSON.stringify({
+                body: 'barma',
+               
+            }),
+
+            })
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err))
+        }
+        updateSingleData();
+        */
+
+        
+        /*delete
+        const deleteData = () =>{
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                method: "DELETE",
+            })
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err))
+        }
+        deleteData();
+        */
+        
+    
+    </script>
+</body>
+</html>
