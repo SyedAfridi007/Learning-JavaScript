@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Input a number Between 5 to 10</p>
+    <input type="text" name="" id="input">
+    <button id="button">Check</button>
+
+    <script>
+        document.querySelector("#button").addEventListener("click", function(){
+            var mes = document.querySelector("#input").value;
+  
+            try{
+                if(mes < 5){
+                    throw "Num is too low";
+                }else if(mes > 10){
+                    throw "Num is too Big";
+                }
+            }catch(err){
+                console.log(err);
+                console.log(err.name);
+            }
+            
+        })
+
+    </script>
+</body>
+</html>

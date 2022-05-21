@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Time</button>
+
+    <p class="text"></p>
+    <p class="text"></p>
+
+
+
+    <script>
+        var btns =document.querySelector(".btn");
+        var texts =document.querySelectorAll('.text');
+
+        btns.addEventListener("click", setTime);
+
+        function setTime(){
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let second = date.getSeconds();
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+
+
+
+            minutes = formateTime(minutes);
+            second = formateTime(second)
+
+            let toTime = hours + ":" + second + ":" + minutes;
+            let toDate = day + ":" + month + ":" + year;
+            texts[0].innerText = "Current time is = "+ toTime;
+            texts[1].innerText = "Today Date is = "+ toDate;
+
+
+            setInterval(setTime, 1000) 
+            
+           
+        }
+
+
+        function formateTime(value){
+            if(value<10){
+               value= "0"+ value 
+            }
+            return value;
+        }
+        
+
+
+    </script>
+</body>
+</html>

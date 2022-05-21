@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        background-color:tomato;
+        height: 300px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div id="div1"></div>
+    <p id="drag1" draggable="true">hello world</p>
+
+    <script>
+        const div = document.querySelector("div");
+        const p = document.querySelector("p");
+
+
+
+        p.addEventListener('dragstart', function(e){
+            e.dataTransfer.setData("Text", e.target.id);
+        });
+
+        div.addEventListener("dragover",function(e){
+            e.preventDefault();
+        });
+
+        div.addEventListener("drop",function(e){
+            let id = e.dataTransfer.getData("Text");
+            //console.log(id);
+            div.appendChild(document.getElementById(id));
+            e.preventDefault();
+
+        });
+    </script>
+</body>
+</html>

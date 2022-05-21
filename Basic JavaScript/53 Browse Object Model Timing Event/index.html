@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Save</button>
+    <p class="message"></p>
+    <script>
+    /*
+      setTimeout(()=>{
+          console.log("hi")
+      },2000);
+    */
+
+   /*
+   setTimeout(display, 2000);
+
+   function display(){
+       console.log("Hello!!!");
+   }
+   */
+
+   var btns = document.querySelector(".btn");
+   var mes = document.querySelector(".message");   
+
+   btns.addEventListener("click", message);
+
+   function message(){
+       mes.textContent=" User Info is saved"
+       setTimeout(()=>{
+        mes.textContent= " "
+       }, 2000);
+       btns.style.display ="none";
+   }
+
+   btns.style.backgroundColor ="red";
+   btns.style.border ="none";
+   btns.style.padding ="1rem";
+   btns.style.color ="white";
+
+
+
+
+/*
+var btns = document.querySelector(".btn");
+var mes = document.querySelector(".message"); 
+
+var count = 0;
+
+btns.addEventListener('click', displayCount)
+function displayCount(){
+    var count = 0;
+    mes.textContent= count
+    
+    setInterval(() => {
+    count++;
+    mes.textContent= count
+    }, 1000);
+}
+*/
+ 
+
+
+    </script>
+</body>
+</html>

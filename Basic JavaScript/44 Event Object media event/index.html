@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <video width="500" controls autoplay>
+        <source src="./video/1.mp4" type="video/mp4">
+        your browser can not support this features
+    </video>
+
+
+    <script>
+
+        const video = document.querySelector("video")
+        //console.log(video);
+        video.addEventListener("waiting", function(){
+            console.log("Week network connection");
+        })
+
+        video.addEventListener("play", function(){
+            console.log("play");
+        })
+
+        video.addEventListener("playing", function(){
+            console.log("playing");
+        })
+
+        video.addEventListener("pause", function(){
+            console.log("pause");
+        })
+
+        video.addEventListener("volumechange", function(){
+            console.log("volume change");
+        })
+
+        video.addEventListener("ended", function(){
+            console.log("Thanks for Watching");
+        })
+
+    </script>
+</body>
+</html>

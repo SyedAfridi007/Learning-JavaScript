@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <script>
+        const input = document.querySelector("input");
+        //console.log(input);
+
+        input.addEventListener("blur", function(e){
+            //console.log("blur is occured")
+            //input.style.backgroundColor = "transparent";
+            //console.log(e.target.value);
+            input.value=e.target.value.toUpperCase();
+
+        })
+
+        
+        input.addEventListener("focus", function(){
+            //console.log("focus is occured")
+            //input.style.backgroundColor = "crimson";
+        })
+
+        
+        input.addEventListener("focusin", function(){
+            //console.log("focusin is occured")
+        })
+
+
+        input.addEventListener("focusout", function(){
+           // console.log("focusout is occured")
+        })
+    </script>
+</body>
+</html>

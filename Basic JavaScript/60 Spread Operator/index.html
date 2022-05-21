@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        function addNum(x,y,z){
+            return x + y + z;
+        }
+        let numbers = [1, 2, 3];
+        console.log(addNum(numbers[0], numbers[1], numbers[2]));
+        */
+
+        //spread operator
+        function addNum(x,y,z){
+            return x + y + z;
+        }
+        let numbers = [1, 2, 3];
+        console.log(addNum(...numbers));
+
+        let numbers1 = [...numbers ,4 ,5]
+        console.log(numbers1);
+
+        let numbers2 = [6, 7, 8];
+
+        //console.log(`${numbers1},${numbers2}`);
+        let numbers3 = numbers1.concat(numbers2);
+        //console.log(numbers3);
+
+        let numbers4 = [...numbers1, ...numbers2];
+        console.log(numbers3);
+
+
+
+        //spread operator with object
+
+
+        let p1 = {
+            name : "Syed Afridi",
+            age: 30,
+        }
+        let p2 = {
+            nationality: "Bangladesh",
+            occupation: 'Student',
+        }
+
+        let p = {...p1, ...p2}
+        console.log(p);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

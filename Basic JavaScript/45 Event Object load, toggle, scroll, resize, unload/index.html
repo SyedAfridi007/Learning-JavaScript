@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 150vh;
+    }
+</style>
+<body>
+
+    <details>
+        <summary>Bangladesh</summary>
+        <img src="./img/flag.png" alt="" width="500">
+    </details>
+    <script>
+
+        //load unload
+        window.addEventListener("load", function(){
+            console.log("load")
+        })
+        window.addEventListener("unload", function(){
+            console.log("unload")
+        })
+
+        //Scroll
+        window.addEventListener("scroll", function(){
+            console.log("scrolling")
+            const height = window.outerHeight;
+            console.log(`Height: ${height}`);
+        })
+        
+        //Resize
+        window.addEventListener("resize", function(){
+            console.log("resizing")
+            const width = window.outerWidth;
+            const height = window.outerHeight;
+            console.log(` height: ${height}, width: ${width}`);
+        })
+
+
+        //toggle
+        const details = document.querySelector("details").addEventListener('toggle', function(e){
+            console.log(e.target.open);
+            console.log("toggle");
+        })
+     
+        
+
+    </script>
+</body>
+</html>

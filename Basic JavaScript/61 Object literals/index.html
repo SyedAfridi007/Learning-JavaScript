@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //object literals
+
+        function studentInfo ( name ,age){
+            return{
+                // same parm name avoid
+                /*
+                name : name,
+                age : age,
+                */
+
+               //Es6 way
+               name,
+               age
+            }
+        }
+        console.log(studentInfo("Syed Afridi", 22));
+
+
+
+        let message = {
+            /*
+            //normal method
+            body : function(){
+                return `Hi i am object function`;
+            }
+            */
+
+            /*
+            //Es6 consize method
+            body(){
+                return `Hi i am object function`;
+            }
+            */
+
+            //using space in function
+            'body name'(){
+                return `Hi i am object function`;
+            }
+
+        }
+        //console.log(message.body());
+        console.log(message['body name']());
+
+
+    </script>
+</body>
+</html>
