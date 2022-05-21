@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //"use strict" is for must define the variables
+
+
+       var x = 10;
+
+        function parentFunc(){
+            var y = 20;
+            console.log(x);
+
+            function childFunc(){
+                var z =30;
+                console.log(x);
+                console.log(y);
+            }
+
+            childFunc();
+        }
+
+        parentFunc();
+
+        console.log(x);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculatePrize() {
+    
+        var totalQuantity = document.getElementById('q').value;
+    
+        var prize = 50;
+        var totalPrize = totalQuantity * prize;
+        var p =  document.getElementById("r")
+        p.innerHTML="Prize is: " + totalPrize;
+      }
+      </script>
+
+      <p id = "r">Prize is: 50</p>
+      <label for="quantity"> Select Quantity</label>
+      <select name="quantity" id="q" onclick="calculatePrize()">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+      </select>
+</body>
+</html>

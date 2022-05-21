@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="prev()">Previous</button>
+    <img src="./img/1.jpg" width="550" height="300">
+    <button onclick="next()">Next</button>
+
+    <script>
+        var photos = ["img/1.jpg","img/2.jpg","img/3.jpg", "img/4.jpg"];
+        var imgTag = document.querySelector("img")
+        var count = 0;
+
+        function next(){
+            count++
+            if(count>=photos.length){
+                count = 0
+            }else{
+                imgTag.src = photos[count];
+            }
+        }
+        function prev(){
+            count--
+            if(count<0){
+                count = photos.length-1;
+                imgTag.src = photos[count];
+
+            }else{
+                imgTag.src = photos[count];
+            }
+        }
+    </script>
+
+</body>
+</html>

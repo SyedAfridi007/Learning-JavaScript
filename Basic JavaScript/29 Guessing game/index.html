@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var numOfWon =  0;
+        var numOfLost = 0;
+        
+        for( var i= 0; i<=5; i++){
+            var guessNumber = parseFloat(prompt("Enter your Guessing Number From 1 to 5"));
+            var randomNumber = Math.floor(Math.random() * 5 ) + 1;
+
+             if(guessNumber == randomNumber){
+                 console.log("Boom! you Won")
+                 numOfWon++;
+             }
+             else if(guessNumber > 5){
+                console.log("Enter Correct Number")
+                
+             }
+             else{
+                 console.log("Boo! you Lose!! Random Number was : " + randomNumber);
+                 numOfLost++;
+             }
+        }
+
+        document.write("You won " + numOfWon +" times <br/>");
+        document.write("You lost " + numOfLost +" times");
+
+   
+    </script>
+</body>
+</html>             

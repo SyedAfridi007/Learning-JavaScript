@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">Afridi</a>
+
+    <div id="my-div" style="background-color: blueviolet;">
+        <h1 class="one">Heading1</h1>
+        <h1 class="two">Heading2</h1>
+    </div>
+
+    <script>
+
+        var ele = document.getElementsByTagName("a")[0];
+        ele.innerHTML = "Google";
+        ele.style.textDecoration = "none";
+        ele.style.color="green"
+        ele.style.fontSize ="3rem";
+
+        ele.href= "https://www.youtube.com/";
+
+
+        var hea1 = document.getElementsByTagName("h1")[0];
+        hea1.innerHTML = "hello"
+
+        //create html element
+
+        var hea3 = document.createElement("h1");
+        var text = document.createTextNode("Heading3");
+        hea3.appendChild(text);
+
+
+        var myDiv = document.getElementById("my-div")
+        myDiv.appendChild(hea3);
+
+
+        var hea2 = document.getElementsByTagName("h1")[1];
+        myDiv.removeChild(hea2)
+
+
+        //create html element in 1st pos
+
+        var hea0 = document.createElement("h1");
+        var text0 = document.createTextNode("heading0");
+
+        hea0.appendChild(text0);
+        myDiv.insertBefore(hea0, hea1);
+
+        
+    </script>
+</body>
+</html>

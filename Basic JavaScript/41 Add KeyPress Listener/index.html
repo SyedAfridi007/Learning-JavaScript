@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background: palevioletred;
+        padding: 1rem;
+        color: white;
+    }
+
+    .animation{
+        background: yellow;
+        color: black;
+    }
+</style>
+<body>
+    <button class="myButton A">A</button>
+    <button class="myButton B">B</button>
+    <button class="myButton C">C</button>
+
+
+    <p id="p1">Enter your Text</p>
+    <p id="p2">Num of Char your Text</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <script>
+
+        var len = document.querySelectorAll(".myButton").length;
+        //console.log(len);
+
+
+        for(i=0; i<len; i++){
+            document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+                var text = this.innerHTML;
+                //console.log(text);
+                playAnimation(text);
+
+            })
+
+            function playAnimation(text){
+                var selectButton = document.querySelector("." + text);
+                //console.log(selectButton);
+                selectButton.classList.add("animation");
+
+                setTimeout(function(){
+                selectButton.classList.remove("animation");
+                },1000);
+            } 
+        }
+
+        //keypress
+        document.addEventListener("keypress",function(event){
+            var text = event.key;
+            playAnimation(text)
+        })
+
+        /*
+        document.addEventListener("keypress",function(event){
+            var demo = event.key;
+            document.querySelector("p").innerHTML= "You have press : " + demo
+            
+            /*
+            if(demo == "f"){
+            document.write("welcome")
+            }else{
+            document.write("reject you press " + demo)
+            }
+            
+        });
+        */
+
+        var count = 0;
+        document.addEventListener("keypress",function(event){
+            count++;
+            var demo = event.key;
+           document.querySelector("#p1").innerHTML= "You have press : " + demo;
+            document.querySelector("#p2").innerHTML= "You have press : " + count + " characters";
+        })
+
+
+    
+    </script>
+</body>
+</html>

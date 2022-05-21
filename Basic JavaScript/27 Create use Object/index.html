@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // how to create constructor 
+        function Student(name,age,dept,lang){
+            this.name=name;
+            this.age=age;
+            this.dept=dept;
+            this.lang=lang;
+
+            //adding function inside constructor
+            this.display = function(){
+                console.log(this.name);
+                console.log(this.age);
+                console.log(this.dept);
+                console.log(this.lang);
+            }
+        }
+
+        var student1 = new Student("Afridi",23,"cse",["bangla", "hindi", "english"]);
+        var student2 = new Student("Arif",20,"bba",["bangla", "hindi", "english"]);
+        //console.log(student1.lang);
+        student1.display();
+
+
+        
+
+        /*
+        // how to create object & print
+        var student1 = {
+            name: "Afridi",
+            age: 23,
+            dept: "cse",
+            lang: ["bangla", "hindi", "english"]
+        }
+            var student2 = {
+            name: "Arif",
+            age: 20,
+            dept: "bba",
+            lang: ["bangla", "hindi", "english"]
+        }
+
+        console.log(student1.dept);
+        */
+
+
+    </script>
+</body>
+</html>

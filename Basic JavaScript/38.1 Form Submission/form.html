@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    var para = document.querySelector('.p');
+    const quantity = document.querySelector('#quantity');
+    var prize = 50;
+    var total = '';
+
+
+    function formHandler(){
+        //e.preventDefault();
+       total = quantity.value * prize;
+       para.innerHTML = 'total prize is ' + total;
+
+    }
+</script>
+
+    <p>Prize is: 50</p>
+        <select name="quantity" id="quantity"  onkeyup="formHandler()">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    <p class="p"  onkeyup="formHandler()"></p>
+
+
+</html>

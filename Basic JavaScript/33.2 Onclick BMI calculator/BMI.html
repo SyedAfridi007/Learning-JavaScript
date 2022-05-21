@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateBMI() {
+     
+        var p = document.getElementById('p');
+        var wtStr =document.getElementById('w').value;
+     
+        if (!wtStr)
+          wtStr = '0';
+     
+        var htStr = document.getElementById('h').value;
+        if (!htStr)
+          htStr = '0';
+     
+     
+        var weight = parseFloat(wtStr);
+        var height = parseFloat(htStr);
+        var tValue = document.getElementById("r").value = (weight / (height * height)).toFixed(2);
+
+        if(tValue < 18.5){
+          p.innerHTML = "You are Thin"
+        }
+        if(tValue > 18.6 && tValue < 24.9){
+          p.innerHTML = "You are Healthy"
+        }
+        if(tValue > 25 && tValue < 29.9){
+          p.innerHTML = "You are Overweight"
+        }
+        if(tValue > 30){
+          p.innerHTML = "You are Obese"
+        }
+
+
+      }
+      </script>
+     
+      <input id = "w" type="Text"  name="weight" size="4" onkeyup="calculateBMI()"> Weight  (in Kilos)  
+      <input id = "h" type="Text" name="height" size="4" onkeyup="calculateBMI()"> Height (in Meters)<br>
+      <input id = "r" type="Text" name="BodyMassIndex" id="BodyMassIndex" size="4"> BMI 
+      <p id="p"></p>    
+</body>
+</html>

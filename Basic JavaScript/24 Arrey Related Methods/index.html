@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var names = ["A", "F", "R", "I", "D", "I"]  
+      console.log(names);
+
+
+      names.shift(); //opposite of pop rmv form first
+      console.log(names);
+
+      names.unshift("A"); //opposite of push add form first
+      console.log(names);
+
+
+      names.splice(0, 1,"S","Y","E","D") //0 is index, 1 is for remove
+      console.log(names);
+
+      //string sort
+
+      var sortedNames = names.sort();
+      console.log(sortedNames);
+
+      var sortedNames = names.reverse();
+      console.log(sortedNames);
+
+
+      // number sort
+      var numbers = [3,2,4,1,7,6,5]  
+
+      numbers.sort(function(a,b){
+          return a - b;
+      })
+      console.log(numbers);
+
+
+      numbers.sort(function(a,b){
+          return b - a;
+      })
+      console.log(numbers);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

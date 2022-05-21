@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!----
+      <button onclick="alert('Hello')"> Click Me </button>
+    -->
+
+    <!----
+    <button onclick="myMessage()"> Click Me </button>
+    <button onclick="myMessage2()"> Click Me 2</button>
+    <button onclick="myMessage3()"> Click Me 3</button>
+
+    <p onclick="myMessage()">Click me</p>
+
+
+    <script>
+        function myMessage(){
+            alert("Hello Everyone");
+        }
+        function myMessage2(){
+            alert("Bye Everyone");
+        }
+        function myMessage3(){
+            document.write("Afridi");
+        }
+    </script>
+
+     
+
+     <!----
+    <button onclick="myMessage()"> Click Me 1</button>
+    <button onclick="myMessage2()"> Click Me 2</button>
+
+     <p id="pera"></p>
+
+     <script>
+
+        var myVar = document.getElementById("pera");
+
+        function myMessage(){
+         myVar.innerHTML = " This is Button 1 "
+        }
+
+        function myMessage2(){
+         myVar.innerHTML = " This is Button 2 "
+        }
+
+     </script>
+
+     -->
+
+    <button onclick="b1()"> Happy </button>
+    <button onclick="b2()"> Wow </button>
+    <button onclick="b3()"> Angry </button>
+    <br>
+
+
+    <img id="imgId" src="#" height="300" width="300">
+
+     <script>
+
+        var myVar = document.getElementById("imgId");
+
+        function b1(){
+            myVar.src = "img/1.png"
+        }
+
+        function b2(){
+            myVar.src = "img/2.jpg"
+        }
+
+        function b3(){
+            myVar.src = "img/3.png"
+        }
+
+     </script>
+
+   
+
+
+</body>
+</html>

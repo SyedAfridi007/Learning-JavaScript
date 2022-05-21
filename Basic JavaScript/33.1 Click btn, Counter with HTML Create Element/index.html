@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Add Item</button>
+  <p></p>
+</body>
+<script>
+  var btn = document.querySelector("button");
+  var text = document.querySelector("p");
+  var count = 0
+  btn.addEventListener("click", function(){
+    count++;
+    //console.log("clicked" + count)
+    text.innerText = count + " item Added";
+
+    /*
+    var h1 = document.createElement("h1")
+    var text = count + " Items Added"
+
+    var textNode = document.createTextNode(text)
+    h1.appendChild(textNode);
+    document.body.appendChild(h1);
+
+   */
+
+  })
+</script>
+</html>

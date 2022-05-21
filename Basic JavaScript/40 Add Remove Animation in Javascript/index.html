@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background: palevioletred;
+        padding: 1rem;
+        color: white;
+    }
+
+    .animation{
+        background: yellow;
+        color: black;
+    }
+</style>
+<body>
+    <button class="myButton A">A</button>
+    <button class="myButton B">B</button>
+    <button class="myButton C">C</button>
+
+    <script>
+
+        var len = document.querySelectorAll(".myButton").length;
+        //console.log(len);
+
+
+        for(i=0; i<len; i++){
+            document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+                var text = this.innerHTML;
+                //console.log(text);
+                playAnimation(text);
+
+            })
+
+            function playAnimation(text){
+                var selectButton = document.querySelector("." + text);
+                //console.log(selectButton);
+                selectButton.classList.add("animation");
+
+                setTimeout(function(){
+                selectButton.classList.remove("animation");
+                },1000);
+            } 
+
+        }
+
+   
+    </script>
+</body>
+</html>

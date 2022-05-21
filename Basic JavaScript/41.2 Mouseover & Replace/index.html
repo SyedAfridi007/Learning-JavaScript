@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+
+    }
+    .card{
+        width: 350px;
+        height: 400px;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .btn{
+        padding: 1rem;
+        background-color: yellow;
+        border: none;
+    }
+
+    .card:hover .btn{
+        animation: swing;
+        animation-duration: 1s;
+    }
+
+    .active{
+        width: 350px;
+        height: 450px;
+        background: red;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+             <button class="btn"> Subscribe</button>
+        </div>
+        <div class="card active">
+             <button class="btn"> Subscribe</button>
+        </div>
+        <div class="card">
+            <button class="btn"> Subscribe</button>   
+        </div>
+    </div>
+</body>
+
+<script>
+const cards = document.getElementsByClassName("card");
+
+for(let i=0; i<cards.length; i++){
+    cards[i].addEventListener("mouseover",function(e){
+        const current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace("active", "");
+        this.className += " active";
+        current[0].style.transition=".5s";
+
+    })
+}
+
+</script>
+</html>
+

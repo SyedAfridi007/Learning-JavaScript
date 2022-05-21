@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+/*Toggle*/
+body{
+  background-color: black;
+}
+
+/*Toggle and Add*/
+.active{
+        /*width: 300px; Add*/
+        /*height: 400px; Add*/
+        background-color:white;
+        /*display: none;  for add*/
+}
+
+/* if else
+div{
+      width: 300px;
+      height: 400px;
+      background-color: blueviolet;
+}
+
+*/
+
+</style>
+<body class="active">
+
+<!--- if else
+<button>Hide</button>
+<div></div>
+-->
+
+<!--<p class="active"></p> -for add--->
+
+
+<button>Night</button>
+
+<script>
+     
+
+//Toggle
+
+        var klass = document.querySelector(".active");
+        var btn = document.querySelector("button")
+
+        btn.addEventListener("click",function(){
+          klass.classList.toggle("active");
+        })
+
+
+
+
+//Add
+/*
+        var klass = document.querySelector(".active");
+        var btn = document.querySelector("button")
+
+        btn.addEventListener("click",function(){
+          klass.classList.add("active");
+          klass.style.display="block";
+        })
+
+*/
+
+
+
+//If Condition
+/*
+        let btn = document.querySelector("button");
+        let div = document.querySelector("div");
+        btn.addEventListener("click", () => {
+        if (div.style.display === "none") {
+        div.style.display = "block";
+        btn.innerText="Hide"
+        } else {
+          div.style.display = "none";
+          btn.innerText="Show"
+
+        }
+     });    
+
+*/
+
+    </script>
+</body>
+
+</html>

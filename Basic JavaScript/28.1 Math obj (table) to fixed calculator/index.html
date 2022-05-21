@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    h1{
+        text-align: center;
+        color: red;
+    }
+    table{
+        border: 2px solid black;
+        margin: 0 auto;
+        width: 20%;
+        height: 20%;
+    }
+    td{
+     border: 1px solid black;
+     padding: .8rem;
+     text-align: center;
+    }
+   
+
+    #btn{
+        text-align: center;
+        background-color: green;
+        border: none;
+        color: white;
+        padding: .5rem;
+        width: 20%; 
+        margin: 0 auto;
+        display: flex;
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+</style>
+<body>
+    <h1>Basic Algebra with javascript</h1>
+
+<div class="container">
+    <table>
+        <tr>
+          <td>Random num 1</td>
+          <td>Random num 2</td>
+        </tr>
+        <tr>
+            <td><h3></h3></td>
+            <td><h3></h3></td>
+          </tr>
+        <tr>
+          <td>Addition</td>
+          <td> <h3></h3></td>
+        </tr>
+        <tr>
+            <td>Subtraction</td>
+            <td><h3></h3></td>
+        </tr>
+
+        <tr>
+           <td>multiplication</td>
+            <td><h3></h3></td>
+          </tr>
+
+          <tr>
+            <td>Division</td>
+            <td><h3></h3></td>
+          </tr>
+      </table>
+
+  <button id="btn">Generate R N</button>
+
+</div>
+
+    
+    <script>
+        var btns = document.querySelector("#btn");
+        var text = document.querySelectorAll("h3");
+
+
+        btns.addEventListener("click", function(){
+           var num1 = Math.floor(Math.random() *100) + 1;
+           var num2 = Math.floor(Math.random() *100) + 1;
+        text[0].innerText ="NUM-1: "+num1
+        text[1].innerText ="NUM-2: "+num2 
+         var sum = num1+num2;
+         text[2].innerText = "Addition= "+sum
+         var sub = num1-num2;
+         text[3].innerText = "Subtraction= "+sub
+         var mul = num1*num2;
+         text[4].innerText = "Multiplication= "+mul
+         var div = (num1/num2).toFixed(2);
+         text[5].innerText = "Division= "+div
+        })
+ 
+         //console.log(num2);
+
+    </script>
+</body>
+</html>
